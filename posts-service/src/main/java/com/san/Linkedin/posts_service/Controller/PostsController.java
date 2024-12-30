@@ -4,8 +4,10 @@ package com.san.Linkedin.posts_service.Controller;
 import com.san.Linkedin.posts_service.DTO.PostCreateRequestDto;
 import com.san.Linkedin.posts_service.DTO.PostDto;
 import com.san.Linkedin.posts_service.Services.PostsService;
+import com.san.Linkedin.posts_service.auth.UserContextHolder;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.apache.catalina.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,6 +30,7 @@ public class PostsController {
 
     @GetMapping("/{postId}")
     public ResponseEntity<PostDto> getPost(@PathVariable Long postId) {
+        Long userId = UserContextHolder.getCurrentUserId();
         PostDto postDto = postsService.getPostById(postId);
         return ResponseEntity.ok(postDto);
     }

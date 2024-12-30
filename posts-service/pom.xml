@@ -8,7 +8,7 @@
 		<version>3.3.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.san.Linkedin</groupId>
+	<groupId>com.san.linkedin</groupId>
 	<artifactId>posts-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>posts-service</name>
@@ -67,6 +67,10 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 	</dependencies>
 

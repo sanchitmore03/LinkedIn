@@ -1,10 +1,13 @@
 package com.san.Linkedin.posts_service.Services;
 
+import com.san.Linkedin.posts_service.Clients.ConnectionsClient;
+import com.san.Linkedin.posts_service.DTO.PersonDto;
 import com.san.Linkedin.posts_service.DTO.PostCreateRequestDto;
 import com.san.Linkedin.posts_service.DTO.PostDto;
 
 
 import com.san.Linkedin.posts_service.Entity.Post;
+import com.san.Linkedin.posts_service.auth.UserContextHolder;
 import com.san.Linkedin.posts_service.exception.ResourceNotFoundException;
 import com.san.Linkedin.posts_service.repository.PostsRepository;
 import lombok.RequiredArgsConstructor;
@@ -22,6 +25,7 @@ public class PostsService {
 
     private final PostsRepository postsRepository;
     private final ModelMapper modelMapper;
+    private final ConnectionsClient connectionsClient;
 
     public PostDto createPost(PostCreateRequestDto postDto, Long userId) {
         Post post = modelMapper.map(postDto, Post.class);
@@ -32,6 +36,10 @@ public class PostsService {
     }
 
     public PostDto getPostById(Long postId) {
+        log.debug("retrieve post with id:{}",postId);
+        Long userId = UserContextHolder.getCurrentUserId();
+        List<PersonDto> firstConnections = connectionsClient.getFirstConnection();
+        // todo : send notifcations to all
         Post post = postsRepository.findById(postId).orElseThrow(()->
                 new ResourceNotFoundException("post not found with id"+postId));
         return modelMapper.map(post, PostDto.class);

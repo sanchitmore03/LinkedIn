@@ -2,6 +2,7 @@ package com.san.LinkedIn.connections_service.Service;
 
 import com.san.LinkedIn.connections_service.Entity.Person;
 import com.san.LinkedIn.connections_service.Repository.PersonRepository;
+import com.san.LinkedIn.connections_service.auth.UserContextHolder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,8 @@ import java.util.List;
 @Slf4j
 public class ConnectionsService {
         private final PersonRepository personRepository;
-        public List<Person> getFirstDegreeConnections(Long userId){
+        public List<Person> getFirstDegreeConnections(){
+            Long userId = UserContextHolder.getCurrentUserId();
             log.info("getting first degree connections with user id:{}",userId);
 
             return personRepository.getFirstDegreeConnections(userId);
