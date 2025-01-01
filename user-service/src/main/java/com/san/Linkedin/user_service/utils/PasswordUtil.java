@@ -1,4 +1,4 @@
-package com.san.Linkedin.user_service.utils;
+package com.san.linkedin.user_service.utils;
 
 
 import org.mindrot.jbcrypt.BCrypt;

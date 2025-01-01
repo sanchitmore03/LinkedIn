@@ -1,4 +1,4 @@
-package com.san.Linkedin.posts_service.auth;
+package com.san.linkedin.posts_service.auth;
 
 import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;

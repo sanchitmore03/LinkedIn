@@ -1,18 +1,21 @@
-package com.san.Linkedin.posts_service.Services;
+package com.san.linkedin.posts_service.Services;
 
-import com.san.Linkedin.posts_service.Clients.ConnectionsClient;
-import com.san.Linkedin.posts_service.DTO.PersonDto;
-import com.san.Linkedin.posts_service.DTO.PostCreateRequestDto;
-import com.san.Linkedin.posts_service.DTO.PostDto;
+import com.san.linkedin.posts_service.Clients.ConnectionsClient;
+import com.san.linkedin.posts_service.DTO.PersonDto;
+import com.san.linkedin.posts_service.DTO.PostCreateRequestDto;
+import com.san.linkedin.posts_service.DTO.PostDto;
 
 
-import com.san.Linkedin.posts_service.Entity.Post;
-import com.san.Linkedin.posts_service.auth.UserContextHolder;
-import com.san.Linkedin.posts_service.exception.ResourceNotFoundException;
-import com.san.Linkedin.posts_service.repository.PostsRepository;
+import com.san.linkedin.posts_service.Entity.Post;
+import com.san.linkedin.posts_service.auth.UserContextHolder;
+import com.san.linkedin.posts_service.event.PostCreatedEvent;
+import com.san.linkedin.posts_service.exception.ResourceNotFoundException;
+import com.san.linkedin.posts_service.repository.PostsRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.catalina.User;
 import org.modelmapper.ModelMapper;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,12 +29,18 @@ public class PostsService {
     private final PostsRepository postsRepository;
     private final ModelMapper modelMapper;
     private final ConnectionsClient connectionsClient;
-
-    public PostDto createPost(PostCreateRequestDto postDto, Long userId) {
+    private final KafkaTemplate<Long, PostCreatedEvent> kafkaTempale;
+    public PostDto createPost(PostCreateRequestDto postDto) {
+        Long userId = UserContextHolder.getCurrentUserId();
         Post post = modelMapper.map(postDto, Post.class);
         post.setUserId(userId);
-
         Post savedPost = postsRepository.save(post);
+        PostCreatedEvent postCreatedEvent = PostCreatedEvent.builder()
+                .postId(savedPost.getId())
+                .creatorId(userId)
+                .content(savedPost.getContent())
+                .build();
+        kafkaTempale.send("post-created-topic",postCreatedEvent);
         return modelMapper.map(savedPost, PostDto.class);
     }
 

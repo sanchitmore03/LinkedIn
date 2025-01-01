@@ -1,4 +1,4 @@
-package com.san.Linkedin.user_service.DTo;
+package com.san.linkedin.user_service.DTo;
 
 import jakarta.persistence.Column;
 import lombok.Data;

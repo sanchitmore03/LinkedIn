@@ -1,8 +1,8 @@
-package com.san.LinkedIn.connections_service.Service;
+package com.san.linkedin.connections_service.Service;
 
-import com.san.LinkedIn.connections_service.Entity.Person;
-import com.san.LinkedIn.connections_service.Repository.PersonRepository;
-import com.san.LinkedIn.connections_service.auth.UserContextHolder;
+import com.san.linkedin.connections_service.Entity.Person;
+import com.san.linkedin.connections_service.Repository.PersonRepository;
+import com.san.linkedin.connections_service.auth.UserContextHolder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.san.Linkedin.user_service.config;
+package com.san.linkedin.user_service.config;
 
 
 import org.modelmapper.ModelMapper;

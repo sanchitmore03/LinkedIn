@@ -1,7 +1,7 @@
-package com.san.Linkedin.user_service.Services;
+package com.san.linkedin.user_service.Services;
 
 
-import com.san.Linkedin.user_service.Entity.User;
+import com.san.linkedin.user_service.Entity.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

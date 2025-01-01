@@ -1,10 +1,10 @@
-package com.san.Linkedin.user_service.config;
+package com.san.linkedin.user_service.config;
 
-import com.san.Linkedin.user_service.DTo.LoginRequesDto;
-import com.san.Linkedin.user_service.DTo.SignupRequesDto;
+import com.san.linkedin.user_service.DTo.LoginRequesDto;
+import com.san.linkedin.user_service.DTo.SignupRequesDto;
 
-import com.san.Linkedin.user_service.DTo.UserDto;
-import com.san.Linkedin.user_service.Services.AuthService;
+import com.san.linkedin.user_service.DTo.UserDto;
+import com.san.linkedin.user_service.Services.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

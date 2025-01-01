@@ -1,4 +1,4 @@
-package com.san.Linkedin.user_service.exception;
+package com.san.linkedin.user_service.exception;
 
 public class ResourceNotFoundException extends RuntimeException{
     public ResourceNotFoundException(String message) {

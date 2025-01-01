@@ -1,4 +1,4 @@
-package com.san.Linkedin.user_service.exception;
+package com.san.linkedin.user_service.exception;
 
 import lombok.Data;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.san.Linkedin.user_service.Entity;
+package com.san.linkedin.user_service.Entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

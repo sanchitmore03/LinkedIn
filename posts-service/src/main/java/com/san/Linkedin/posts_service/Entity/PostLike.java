@@ -1,4 +1,4 @@
-package com.san.Linkedin.posts_service.Entity;
+package com.san.linkedin.posts_service.Entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

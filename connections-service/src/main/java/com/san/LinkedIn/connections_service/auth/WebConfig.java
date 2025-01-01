@@ -1,4 +1,4 @@
-package com.san.LinkedIn.connections_service.auth;
+package com.san.linkedin.connections_service.auth;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

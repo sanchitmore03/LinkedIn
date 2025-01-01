@@ -1,4 +1,4 @@
-package com.san.Linkedin.posts_service.DTO;
+package com.san.linkedin.posts_service.DTO;
 
 import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;

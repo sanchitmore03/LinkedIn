@@ -1,7 +1,7 @@
-package com.san.LinkedIn.connections_service.Repository;
+package com.san.linkedin.connections_service.Repository;
 
-import com.san.LinkedIn.connections_service.Entity.Person;
-import org.springframework.dao.PessimisticLockingFailureException;
+
+import com.san.linkedin.connections_service.Entity.Person;
 import org.springframework.data.neo4j.repository.Neo4jRepository;
 import org.springframework.data.neo4j.repository.query.Query;
 import org.springframework.stereotype.Repository;

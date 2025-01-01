@@ -1,6 +1,7 @@
-package com.san.Linkedin.user_service.Repos;
+package com.san.linkedin.user_service.Repos;
 
-import com.san.Linkedin.user_service.Entity.User;
+
+import com.san.linkedin.user_service.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

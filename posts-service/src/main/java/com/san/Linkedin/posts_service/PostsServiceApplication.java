@@ -1,4 +1,4 @@
-package com.san.Linkedin.posts_service;
+package com.san.linkedin.posts_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

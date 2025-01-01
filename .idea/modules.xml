@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/LinkedIn.iml" filepath="$PROJECT_DIR$/.idea/LinkedIn.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery-service/discovery-service.iml" filepath="$PROJECT_DIR$/discovery-service/discovery-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/linkedin.iml" filepath="$PROJECT_DIR$/.idea/linkedin.iml" />
     </modules>
   </component>
 </project>

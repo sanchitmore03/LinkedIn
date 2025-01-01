@@ -1,4 +1,4 @@
-package com.san.Linkedin.user_service.exception;
+package com.san.linkedin.user_service.exception;
 
 
 import org.springframework.http.HttpStatus;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<ApiError> handleResourceNotFoundException(ResourceNotFoundException exception) {
+    @ExceptionHandler(com.san.linkedin.user_service.exception.ResourceNotFoundException.class)
+    public ResponseEntity<ApiError> handleResourceNotFoundException(com.san.linkedin.user_service.exception.ResourceNotFoundException exception) {
         ApiError apiError = new ApiError(exception.getLocalizedMessage(), HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(apiError, HttpStatus.NOT_FOUND);
     }

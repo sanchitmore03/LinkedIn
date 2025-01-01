@@ -1,4 +1,4 @@
-package com.san.LinkedIn.connections_service.auth;
+package com.san.linkedin.connections_service.auth;
 
 public class UserContextHolder {
     private static final ThreadLocal<Long> currentUserId = new ThreadLocal<>();

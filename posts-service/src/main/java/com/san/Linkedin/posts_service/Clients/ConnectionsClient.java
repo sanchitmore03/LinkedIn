@@ -1,6 +1,6 @@
-package com.san.Linkedin.posts_service.Clients;
+package com.san.linkedin.posts_service.Clients;
 
-import com.san.Linkedin.posts_service.DTO.PersonDto;
+import com.san.linkedin.posts_service.DTO.PersonDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,7 +1,6 @@
-package com.san.Linkedin.posts_service.repository;
+package com.san.linkedin.posts_service.repository;
 
-import com.san.Linkedin.posts_service.Entity.Post;
-import org.springframework.boot.autoconfigure.data.ConditionalOnRepositoryType;
+import com.san.linkedin.posts_service.Entity.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

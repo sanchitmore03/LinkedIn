@@ -1,8 +1,9 @@
-package com.san.LinkedIn.connections_service.Controller;
+package com.san.linkedin.connections_service.Controller;
 
 
-import com.san.LinkedIn.connections_service.Entity.Person;
-import com.san.LinkedIn.connections_service.Service.ConnectionsService;
+
+import com.san.linkedin.connections_service.Entity.Person;
+import com.san.linkedin.connections_service.Service.ConnectionsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
