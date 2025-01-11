@@ -1,4 +1,4 @@
-package com.san.linedIn.notification_service.Notification_Service.Entity;
+package com.san.linkedin.notification_service.Notification_Service.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,8 +13,6 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 public class Notification {

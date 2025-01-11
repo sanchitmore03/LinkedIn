@@ -1,4 +1,4 @@
-package com.san.linedIn.notification_service.Notification_Service.Dto;
+package com.san.linkedin.notification_service.Notification_Service.Dto;
 
 import lombok.Data;
 

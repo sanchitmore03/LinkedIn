@@ -6,12 +6,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@Builder
+
 @Data
-@Getter
-@Setter
 public class PostCreatedEvent {
-    private Long creatorId;
-    private String content;
-    private Long postId;
+     Long creatorId;
+     String content;
+     Long postId;
 }

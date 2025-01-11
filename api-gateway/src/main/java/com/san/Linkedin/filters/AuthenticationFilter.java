@@ -1,7 +1,7 @@
 package com.san.linkedin.filters;
 
 
-import com.san.Linkedin.JWTService;
+import com.san.linkedin.JWTService;
 import io.jsonwebtoken.JwtException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.san.linedIn.notification_service.Notification_Service.auth;
+package com.san.linkedin.notification_service.Notification_Service.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -7,11 +7,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
+
     @Autowired
     private UserInterceptor userInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        WebMvcConfigurer.super.addInterceptors(registry);
         registry.addInterceptor(userInterceptor);
     }
 }

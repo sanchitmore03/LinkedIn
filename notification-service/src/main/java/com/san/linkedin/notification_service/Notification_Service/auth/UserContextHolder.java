@@ -3,18 +3,19 @@ package com.san.linkedin.notification_service.Notification_Service.auth;
 
 
 public class UserContextHolder {
+
     private static final ThreadLocal<Long> currentUserId = new ThreadLocal<>();
 
-    public static Long getCurrentUserId(){
+    public static Long getCurrentUserId() {
         return currentUserId.get();
     }
 
-     static void setCurrentUserId(Long userId){
-         currentUserId.set(userId);
+    static void setCurrentUserId(Long userId) {
+        currentUserId.set(userId);
     }
 
-    static void clear(){
+    static void clear() {
         currentUserId.remove();
     }
-
 }
+
